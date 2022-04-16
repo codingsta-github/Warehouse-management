@@ -5,20 +5,36 @@
 .details{
     color: white;
     position: absolute;
-    top: 350px;
-    left: 150px;
+    top: 335px;
+    left: 125px;
     text-align: left;
     text-align: center;
+    z-index: 1;
+    line-height: 1;
 }
-
 .details h1{
-    font-size: 8rem;
+    font-size: 7rem;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
 }
+
 .details p{
-    font-size: 5rem;
+    font-size: 4rem;
 }
 .details span{
     color: #e268e0;
 }
+.details-gym{
+    color: #332467;
+    position: absolute;
+    top: 215px;
+    left: 10px;
+    text-align: left;
+    text-align: center;
+}
+.details-gym h1{
+    font-size: 32rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
