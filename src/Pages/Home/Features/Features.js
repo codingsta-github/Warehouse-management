@@ -1,6 +1,6 @@
 import React from 'react';
-import "./Home.css"
-const Home = () => {
+import './Features.css'
+const Features = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Features;
