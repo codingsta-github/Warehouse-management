@@ -10,7 +10,7 @@ const Service = ({service}) => {
             <div className="service-details">
             <div className="service-info">
                 <h1>{name}</h1>
-                {/* <p>{details}</p>                 */}
+                <p>{details}</p>                
             </div>
             <div className="service-price">
                 <h1>$ {price} <span>/ month</span></h1>

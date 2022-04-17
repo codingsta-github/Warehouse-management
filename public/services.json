@@ -4,14 +4,14 @@
     "images":"images/service1.jpg",
     "name": "complete athlete training",
     "price": 199,
-    "details": "The workmanship is exquisite and designs are unique. Extremely happy with every purchase I have made so far."
+    "details": "started on april 10 ,2023"
 },
     {
     "id": 2,
     "images":"images/service2.jpg",
     "name": "maximum fat loss",
     "price": 149,
-    "details": "I bought this pair for my daughter as Diwali gift. I gifted it to her today. She loved it and they truly suited her!"
+    "details": "started on april 10 ,2023"
     
 },
     {
@@ -19,14 +19,14 @@
     "images":"images/service3.jpg",
     "name": "bodyweight training",
     "price": 249,
-    "details": "The earrings were same as in website and of good quality"
+    "details": "started on april 10 ,2023"
 },
     {
     "id": 4,
     "images":"images/service4.jpg",
     "name": "advance bodyweight training",
     "price": 199,
-    "details": "Bought it for my wife. Apparently it’s exactly as she thought it would be. Just beautiful and great quality."
+    "details": "started on april 10 ,2023"
     
 },
     {
@@ -34,28 +34,28 @@
     "images":"images/service5.jpg",
     "name": "complete athlete training II",
     "price": 130,
-    "details": "It's a beautiful piece to own. Appreciate the fast delivery"
+    "details": "started on april 10 ,2023"
 },
     {
     "id": 6,
     "images":"images/service6.jpg",
     "name": "women's training program",
     "price": 250,
-    "details": "The product looks good but need to see how the item will last after long usage"
+    "details": "started on april 10 ,2023"
 },
     {
     "id": 7,
     "images":"images/service7.jpg",
     "name": "ab training system",
     "price": 299,
-    "details": "The earrings were same as in website and of good quality"
+    "details": "started on april 10 ,2023"
 },
     {
     "id": 8,
     "images":"images/service8.jpg",
     "name": "physical ready ness training",
     "price": 199,
-    "details": "Bought it for my wife. Apparently it’s exactly as she thought it would be. Just beautiful and great quality."
+    "details": "started on april 10 ,2023"
     
 },
     {
@@ -63,6 +63,6 @@
     "images":"images/service9.jpg",
     "name": "unleash the beast ",
     "price": 249,
-    "details": "It's a beautiful piece to own. Appreciate the fast delivery"
+    "details": "started on april 10 ,2023"
 }
 ]

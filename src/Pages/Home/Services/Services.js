@@ -16,6 +16,8 @@ const Services = () => {
           services.slice(0,3).map(service=><Service service={service} key={service.id}></Service>)
       }
       </div>
+      <button className="more-programs">more programs ></button>
+
     </div>
   );
 };
