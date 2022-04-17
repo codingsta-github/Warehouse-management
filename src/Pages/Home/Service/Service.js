@@ -6,6 +6,7 @@ const Service = ({service}) => {
     return (
         <div className='service'>
             <img src={images} width="100%" alt="" />
+            <button className='service-button'>ADD TO CHART</button>
             <div className="service-details">
             <div className="service-info">
                 <h1>{name}</h1>
