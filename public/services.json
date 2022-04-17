@@ -1,0 +1,59 @@
+[
+    {
+    "id": 1,
+    "images":"images/service1.jpg",
+    "name": "complete athlete training",
+    "details": "The workmanship is exquisite and designs are unique. Extremely happy with every purchase I have made so far."
+},
+    {
+    "id": 2,
+    "images":"images/service2.jpg",
+    "name": "maximum fat loss",
+    "details": "I bought this pair for my daughter as Diwali gift. I gifted it to her today. She loved it and they truly suited her!"
+    
+},
+    {
+    "id": 3,
+    "images":"images/service3.jpg",
+    "name": "bodyweight training",
+    "details": "The earrings were same as in website and of good quality"
+},
+    {
+    "id": 4,
+    "images":"images/service4.jpg",
+    "name": "advance bodyweight training",
+    "details": "Bought it for my wife. Apparently it’s exactly as she thought it would be. Just beautiful and great quality."
+    
+},
+    {
+    "id": 5,
+    "images":"images/service5.jpg",
+    "name": "complete athlete training II",
+    "details": "It's a beautiful piece to own. Appreciate the fast delivery"
+},
+    {
+    "id": 6,
+    "images":"images/service6.jpg",
+    "name": "women's training program",
+    "details": "The product looks good but need to see how the item will last after long usage"
+},
+    {
+    "id": 7,
+    "images":"images/service7.jpg",
+    "name": "ab training system",
+    "details": "The earrings were same as in website and of good quality"
+},
+    {
+    "id": 8,
+    "images":"images/service8.jpg",
+    "name": "physical ready ness training",
+    "details": "Bought it for my wife. Apparently it’s exactly as she thought it would be. Just beautiful and great quality."
+    
+},
+    {
+    "id": 9,
+    "images":"images/service9.jpg",
+    "name": "unleash the beast ",
+    "details": "It's a beautiful piece to own. Appreciate the fast delivery"
+}
+]

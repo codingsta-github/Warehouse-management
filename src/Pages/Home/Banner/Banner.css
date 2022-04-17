@@ -1,22 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+
 .image{
     position: relative;
 }
 .details{
     color: white;
     position: absolute;
-    top: 335px;
-    left: 125px;
+    top: 380px;
+    left: 160px;
     text-align: left;
     text-align: center;
     z-index: 1;
     line-height: 1;
 }
 .details h1{
-    font-size: 7rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: 6rem;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
+    font-style: italic;
 }
+
 
 .details p{
     font-size: 4rem;
@@ -34,7 +36,8 @@
 }
 .details-gym h1{
     font-size: 32rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
+    font-style: italic;
 }
 
