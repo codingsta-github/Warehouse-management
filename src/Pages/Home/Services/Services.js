@@ -6,12 +6,16 @@ const Services = () => {
   const [services, setServices] = useServices();
   console.log(services)
   return (
-    <div className="services" id="services">
+    <div className="service-container" id="services">
+      <div className="service-heading">
       <h1>CHOOSE THE PROGRAM</h1>
       <h4>NEW GYM EXPERIENCE</h4>
+      </div>
+      <div className="services">
       {
-          services.map(service=><Service service={service} key={service.id}></Service>)
+          services.slice(0,3).map(service=><Service service={service} key={service.id}></Service>)
       }
+      </div>
     </div>
   );
 };
