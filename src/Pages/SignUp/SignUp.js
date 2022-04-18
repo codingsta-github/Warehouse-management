@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 const SignUp = () => {
   const [email,setEmail]=useState([])
   const [password,setPassword]=useState([])
@@ -64,6 +65,7 @@ const SignUp = () => {
             <input type="submit" className="form-submit" value="Sign Up" />
            
             <p>Already have an account? <Link className="form-link" to="/login">Login account</Link> </p>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>
