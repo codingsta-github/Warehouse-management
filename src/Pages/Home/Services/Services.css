@@ -21,14 +21,21 @@
   text-align: center;
   color: #e268e0;
 }
+.service-cart{
+  display: flex;
+}
 .services {
   max-width: 1200px;
   margin: 50px auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
 }
+.cart-container{
+  flex-basis: 35%;
+}
 .more-programs {
+  text-decoration: none;
   padding: 20px 40px;
   border: none;
   border-radius: 40px;
