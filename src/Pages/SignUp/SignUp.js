@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
+import '../Login/Login.css'
 const SignUp = () => {
   const [name,setName]=useState([])
   const [email,setEmail]=useState([])

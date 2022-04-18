@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-
+import "../Login/Login.css"
 const Checkout = () => {
     const [user]=useAuthState(auth)
 

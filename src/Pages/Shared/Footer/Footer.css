@@ -1,8 +1,7 @@
-.footer{
-margin: 50px 0;  
-padding: 50px 0;  
-height: 200px;
-    color: white;
+.footer {
+  padding: 50px 0;
+  height: 200px;
+  color: white;
   background-color: #332467;
-    text-align: center;
+  text-align: center;
 }
