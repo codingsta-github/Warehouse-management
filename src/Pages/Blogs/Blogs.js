@@ -25,7 +25,18 @@ const Blogs = () => {
       </h1>
       <p>
         Answer: I'm using firebase for authentication of my application. <br />
-        It can easily built one of the best security system.
+        It can easily built one of the best security system. 
+        Here are few authentication system
+        <li>STYTCH</li>
+        <li>Supabase</li>
+        <li>Ory</li>
+        <li>Okta</li>
+        <li>PingIdentity</li>
+        <li>Keycloak</li>
+        <li>Frontegg</li>
+        <li>Auth0</li>
+        <li>Amazon</li>
+        <li>Cognito</li>
         <br />
       </p>
 
@@ -37,8 +48,8 @@ const Blogs = () => {
         authentication?
       </h1>
       <p>
-        Answer : There are many services other than
-        authentication which Firebase provides, <br />
+        Answer : There are many services other than authentication which
+        Firebase provides, <br />
         Most useful of them are: <br />
         <li>Cloud Firestore</li>
         <li>Cloud Functions</li>
@@ -49,7 +60,6 @@ const Blogs = () => {
         <li>Cloud Messaging</li>
         <li>Dynamic Links</li>
         <li>Remote Config</li>
-        
       </p>
     </div>
   );
