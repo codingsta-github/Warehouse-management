@@ -29,17 +29,17 @@ const Header = () => {
             </Nav>
             <Nav>
               <Nav.Link as={Link} to="/checkout">Checkout</Nav.Link>
-              <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+              <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
               <Nav.Link as={Link} to="/about">About</Nav.Link>
               {
                 user?
-                <button onClick={handleSignOut}>sign out</button>
-                : <Nav.Link as={Link} to="/login">login</Nav.Link>
+                <button onClick={handleSignOut}>Sign out</button>
+                : <Nav.Link as={Link} to="/login">Login</Nav.Link>
               }
               {
                 user?
                 <></>
-                : <Nav.Link as={Link} to="/signup">signup</Nav.Link>
+                : <Nav.Link as={Link} to="/signup">Signup</Nav.Link>
               }
               
             </Nav>

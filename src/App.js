@@ -11,7 +11,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import Checkout from './Pages/Checkout/Checkout';
 import SignUp from './Pages/SignUp/SignUp';
-import Blog from './Pages/Blog/Blog';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Route path='/Checkout' element={<RequireAuth>
           <Checkout></Checkout>
         </RequireAuth>}></Route>
-        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/Blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
