@@ -4,11 +4,12 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 const SignUp = () => {
+  const [name,setName]=useState([])
   const [email,setEmail]=useState([])
   const [password,setPassword]=useState([])
   const [confirmPassword,setConfirmPassword]=useState([])
   const [error,setError]=useState([])
-  const [createUserWithEmailAndPassword,user]=useCreateUserWithEmailAndPassword(auth)
+  const [createUserWithEmailAndPassword,user]=useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true})
 
   const navigate=useNavigate()
   const navigateLogin=()=>{
@@ -16,6 +17,9 @@ const SignUp = () => {
   }
   if (user) {
     navigate('/home')
+  }
+  const handleNameBlur=(e)=>{
+    setName(e.target.value)
   }
   const handleEmailBlur=(e)=>{
     setEmail(e.target.value)
@@ -49,6 +53,10 @@ const SignUp = () => {
         <div className="form-container">
           <div>
             <h1 className="form-title">Sign Up</h1>
+            <div className="input-group">
+              <label htmlFor="name">Your Name</label>
+              <input onBlur={handleNameBlur} type="name" name="name" id="" required />
+            </div>
             <div className="input-group">
               <label htmlFor="email">Email</label>
               <input onBlur={handleEmailBlur} type="email" name="email" id="" required />

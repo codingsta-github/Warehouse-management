@@ -28,6 +28,9 @@ const Header = () => {
               <Nav.Link href="home#services">Services</Nav.Link>
             </Nav>
             <Nav>
+              <Nav.Link as={Link} to="/checkout">Checkout</Nav.Link>
+              <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+              <Nav.Link as={Link} to="/about">About</Nav.Link>
               {
                 user?
                 <button onClick={handleSignOut}>sign out</button>
@@ -39,8 +42,6 @@ const Header = () => {
                 : <Nav.Link as={Link} to="/signup">signup</Nav.Link>
               }
               
-              <Nav.Link as={Link} to="/cart">cart</Nav.Link>
-              <Nav.Link as={Link} to="/shipment">shipment</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

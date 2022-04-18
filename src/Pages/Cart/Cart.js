@@ -14,7 +14,7 @@ const Cart = ({cart}) => {
             {services.map(service=><AddedServices service={service} key={service.id}/>)}
             <h4>Order Summary</h4>
             <h5>Grand Total: {total}</h5>
-            <Link to="/shipment">
+            <Link to="/checkout">
                         <button>Review Order </button>
                     </Link>
         </div>

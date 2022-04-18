@@ -1,9 +1,13 @@
+import { sendPasswordResetEmail } from "firebase/auth";
 import React, { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import "./Login.css";
 import SocialLogin from "./SocialLogin/SocialLogin";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { async } from "@firebase/util";
 const Login = () => {
   const [email, setEmail] = useState([]);
   const [password, setPassword] = useState([]);
@@ -28,6 +32,13 @@ const Login = () => {
 
     signInWithEmailAndPassword(email, password);
   };
+  const resetPassword=()=>{
+    if (email) {
+    sendPasswordResetEmail(email)
+    toast('Email sent')
+    }
+  }
+  
   return (
     <div>
       <div className="form-container">
@@ -50,7 +61,6 @@ const Login = () => {
               type="password"
               name="password"
               id=""
-              required
             />
             <p>{error?.message}</p>
             {loading && <p>loading...</p>}
@@ -62,10 +72,17 @@ const Login = () => {
               Create account
             </Link>{" "}
           </p>
+          <p>
+            Forget password?
+            <button onClick={resetPassword}>
+              Reset Password
+            </button>
+          </p>
         </form>
       </div>
 
       <SocialLogin></SocialLogin>
+      <ToastContainer/>
     </div>
   );
 };
