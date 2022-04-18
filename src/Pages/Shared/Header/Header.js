@@ -12,7 +12,7 @@ const Header = () => {
   }
   return (
     <>
-      <Navbar
+      <Navbar className=" fs-5"
         collapseOnSelect
         expand="lg"
         bg="light"

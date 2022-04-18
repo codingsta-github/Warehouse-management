@@ -1,12 +1,11 @@
 
-.image{
+.banner{
     position: relative;
-    width: 1440px;
 }
 .details{
     color: white;
     position: absolute;
-    top: 380px;
+    top: 310px;
     left: 160px;
     text-align: left;
     text-align: center;
@@ -30,7 +29,7 @@
 .details-gym{
     color: #332467;
     position: absolute;
-    top: 215px;
+    top: 135px;
     left: 10px;
     text-align: left;
     text-align: center;
