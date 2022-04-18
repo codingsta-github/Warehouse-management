@@ -68,3 +68,13 @@
   text-align: center;
   color: #a8a4b3;
 }
+
+
+@media only screen and (max-width: 600px){
+  .service {
+    margin-bottom: 50px;
+    width: 350px;
+  }
+  
+  
+}

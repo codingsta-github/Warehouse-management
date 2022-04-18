@@ -32,7 +32,7 @@
   grid-gap: 30px;
 }
 .cart-container{
-  flex-basis: 35%;
+  flex-basis: 30%;
 }
 .more-programs {
   text-decoration: none;
@@ -44,4 +44,31 @@
   font-size: 1rem;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px){
+  .service-container {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .service-heading h1 {
+    font-size: 2rem;
+  }
+  .service-heading h4 {
+    font-size: 1rem;
+  }
+  .service-cart{
+    display: flex;
+    flex-direction: column;
+  }
+  .services {
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+  
 }

@@ -6,8 +6,8 @@ const AddedServices = ({service}) => {
     return (
         <div className='added-Services'>
             <img src={images} alt="" />
-            <h4>{name}</h4>
-            <p>$ {price}</p>
+            <h3>{name}</h3>
+            <p> / $ {price}</p>
         </div>
     );
 };

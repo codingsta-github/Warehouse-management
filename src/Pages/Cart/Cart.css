@@ -1,0 +1,24 @@
+.cart{
+    margin: 80px 0 0 50px;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.cart p{
+    font-size: .7rem;
+}
+.checkout-button{
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #e268e0;
+  color: white;
+  font-size: 1rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 600px){
+    .cart{
+        margin: 80px 0 0 10px;
+        padding: 10px;
+    }
+}

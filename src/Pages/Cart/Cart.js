@@ -11,11 +11,13 @@ const Cart = ({cart}) => {
     
     return (
         <div className='cart'>
+            
+            <h4>Program cart Summary</h4>
+            <p>*you cant not add a program more than once</p>
             {services.map(service=><AddedServices service={service} key={service.id}/>)}
-            <h4>Order Summary</h4>
-            <h5>Grand Total: {total}</h5>
+            <h5> Total: {total}</h5>
             <Link to="/checkout">
-                        <button>Review Order </button>
+                        <button className='checkout-button'>Check Out </button>
                     </Link>
         </div>
     );
