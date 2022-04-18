@@ -8,9 +8,13 @@ const SignUp = () => {
   const [confirmPassword,setConfirmPassword]=useState([])
   const [error,setError]=useState([])
   const [createUserWithEmailAndPassword,user]=useCreateUserWithEmailAndPassword(auth)
+
   const navigate=useNavigate()
+  const navigateLogin=()=>{
+    navigate("/login")
+  }
   if (user) {
-    navigate('/shop')
+    navigate('/home')
   }
   const handleEmailBlur=(e)=>{
     setEmail(e.target.value)
