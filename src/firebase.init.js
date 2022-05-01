@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 import {getAuth} from 'firebase/auth'
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBER9oAn5ad1q7fM0AtdGJ57DSWSAwXOz4",
-  authDomain: "guru-mann-fitness-55bf6.firebaseapp.com",
-  projectId: "guru-mann-fitness-55bf6",
-  storageBucket: "guru-mann-fitness-55bf6.appspot.com",
-  messagingSenderId: "654577657074",
-  appId: "1:654577657074:web:13512945f675fcc369dc6b"
+  apiKey: "AIzaSyAfLQqZywuTKA2Tgx3EZExRQshm29bYZHg",
+  authDomain: "warehouse-management-b22f6.firebaseapp.com",
+  projectId: "warehouse-management-b22f6",
+  storageBucket: "warehouse-management-b22f6.appspot.com",
+  messagingSenderId: "853983191069",
+  appId: "1:853983191069:web:c0c2f8e5610067e89b66f4"
 };
 
 // Initialize Firebase
