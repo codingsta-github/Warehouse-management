@@ -8,7 +8,7 @@ import gallery5 from "../../../Assets/gallery/gallery5.jpg";
 import gallery6 from "../../../Assets/gallery/gallery6.jpg";
 const Features = () => {
   return (
-    <div className="feature-container" id="services">
+    <div className="feature-container" id="cars">
       <div className="feature-heading">
         <h1>GALLERY UPDATES</h1>
         <h4>STAY HEALTHY & FIT</h4>

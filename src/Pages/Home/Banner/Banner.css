@@ -1,73 +1,76 @@
+.banner {
+  position: relative;
+}
+.image img {
+  /* width: 360px; */
+  padding: 0 auto;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.details {
+  color: white;
+  position: absolute;
+  top: 310px;
+  left: 160px;
+  text-align: left;
+  text-align: center;
+  z-index: 1;
+  line-height: 1;
+}
+.details h1 {
+  font-size: 6rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+}
 
-.banner{
-    position: relative;
+.details p {
+  font-size: 4rem;
 }
-.details{
-    color: white;
-    position: absolute;
-    top: 310px;
-    left: 160px;
-    text-align: left;
-    text-align: center;
-    z-index: 1;
-    line-height: 1;
+.details span {
+  color: #e268e0;
 }
-.details h1{
-    font-size: 6rem;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    font-style: italic;
+.details-gym {
+  color: #332467;
+  position: absolute;
+  top: 135px;
+  left: 10px;
+  text-align: left;
+  text-align: center;
 }
-
-
-.details p{
-    font-size: 4rem;
-}
-.details span{
-    color: #e268e0;
-}
-.details-gym{
-    color: #332467;
-    position: absolute;
-    top: 135px;
-    left: 10px;
-    text-align: left;
-    text-align: center;
-}
-.details-gym h1{
-    font-size: 32rem;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    font-style: italic;
+.details-gym h1 {
+  font-size: 32rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
 }
 
 @media only screen and (max-width: 600px) {
-    .image img{
-       /* width: 360px; */
-       padding: 0 auto;
-       width: 100%;
+  .image img {
+    /* width: 360px; */
+    padding: 0 auto;
+    width: 100%;
     height: auto;
     max-width: 100%;
-    }
-    .details{
-        position: absolute;
-        top: 81px;
-        left: 50px;
-        
-    }
-    .details h1{
-        font-size: 1.5rem;
-        
-    }
-    .details p{
-        font-size: 1rem;
-    }
-    .details-gym{
-        position: absolute;
-        top: 45px;
-        left: 10px;
-    }
-    .details-gym h1{
-        font-size: 8rem;
-    }
+  }
+  .details {
+    position: absolute;
+    top: 81px;
+    left: 50px;
+  }
+  .details h1 {
+    font-size: 1.5rem;
+  }
+  .details p {
+    font-size: 1rem;
+  }
+  .details-gym {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+  }
+  .details-gym h1 {
+    font-size: 8rem;
+  }
 }
