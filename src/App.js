@@ -18,7 +18,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/car/:id' element={<CarUpdate></CarUpdate>}></Route>
+        <Route path='/car/:_id' element={<CarUpdate></CarUpdate>}></Route>
         <Route path='/Checkout' element={<RequireAuth>
           <Checkout></Checkout>
         </RequireAuth>}></Route>

@@ -5,8 +5,6 @@ import Car from '../Car/Car'
 import "./Cars.css";
 const Cars = () => {
   const [cars, setCars] = useCars();
- 
-
   return (
     <div className="service-container" id="cars">
       <div className="service-heading">
@@ -15,7 +13,7 @@ const Cars = () => {
       </div>
       <div className="cars">
       {
-          cars.map(service=><Car service={service} key={service.id} ></Car>)
+          cars.map(car=><Car car={car} key={car._id} ></Car>)
       }
       </div>
 
