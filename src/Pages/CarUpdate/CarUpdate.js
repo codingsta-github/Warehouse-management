@@ -7,7 +7,7 @@ const CarUpdate = () => {
     fetch(`http://localhost:5000/car/${_id}`)
       .then((res) => res.json())
       .then((data) => setCar(data));
-  }, [_id]);
+  }, [car.quantity,_id]);
 
   const delivered = () => {
     const quantity = parseInt(car.quantity) - 1;
