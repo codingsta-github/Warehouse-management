@@ -10,7 +10,7 @@ const CarUpdate = () => {
   }, [car.quantity,_id]);
 
   const delivered = () => {
-    const quantity = parseInt(car.quantity) - 1;
+    const quantity = parseInt(car.quantity) -1;
     const newQuantity={quantity}
     fetch(`http://localhost:5000/car/${_id}`, {
       method: "PUT",
@@ -21,7 +21,8 @@ const CarUpdate = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        setCar(data);
+        console.log(data)
       });
   };
 
