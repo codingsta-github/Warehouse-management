@@ -7,11 +7,11 @@ const CarUpdate = () => {
     fetch(`http://localhost:5000/car/${_id}`)
       .then((res) => res.json())
       .then((data) => setCar(data));
-  }, [car.quantity,_id]);
+  }, [car.quantity, _id]);
 
   const delivered = () => {
-    const quantity = parseInt(car.quantity) -1;
-    const newQuantity={quantity}
+    const quantity = parseInt(car.quantity) - 1;
+    const newQuantity = { quantity };
     fetch(`http://localhost:5000/car/${_id}`, {
       method: "PUT",
       headers: {
@@ -22,7 +22,27 @@ const CarUpdate = () => {
       .then((res) => res.json())
       .then((data) => {
         setCar(data);
-        console.log(data)
+      });
+  };
+
+  const [restockQuantity, setRestockQuantity] = useState();
+  const handleChange = (e) => {
+    setRestockQuantity(e.target.value);
+  };
+  const restock = (e) => {
+    e.preventDefault();
+    const quantity = parseInt(car.quantity) + parseInt(restockQuantity);
+    const newQuantity = { quantity };
+    fetch(`http://localhost:5000/car/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newQuantity),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setCar(data);
       });
   };
 
@@ -32,6 +52,16 @@ const CarUpdate = () => {
 
       <h1>quantity : {car.quantity}</h1>
       <button onClick={delivered}>delivered</button>
+
+      <form action="" onSubmit={restock}>
+        <input
+          type="number"
+          placeholder="restock"
+          onBlur={handleChange}
+          required
+        />
+        <input type="submit" value="restock" />
+      </form>
     </div>
   );
 };
