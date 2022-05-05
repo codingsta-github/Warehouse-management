@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 const CarUpdate = () => {
   const { _id } = useParams();
+
   const [car, setCar] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/car/${_id}`)
+    fetch(`http://thawing-headland-66611.herokuapp.com/car/${_id}`)
       .then((res) => res.json())
       .then((data) => setCar(data));
   }, [car.quantity, _id]);
@@ -12,7 +14,8 @@ const CarUpdate = () => {
   const delivered = () => {
     const quantity = parseInt(car.quantity) - 1;
     const newQuantity = { quantity };
-    fetch(`http://localhost:5000/car/${_id}`, {
+
+    fetch(`http://thawing-headland-66611.herokuapp.com/car/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -26,14 +29,16 @@ const CarUpdate = () => {
   };
 
   const [restockQuantity, setRestockQuantity] = useState();
+
   const handleChange = (e) => {
     setRestockQuantity(e.target.value);
   };
+  
   const restock = (e) => {
     e.preventDefault();
     const quantity = parseInt(car.quantity) + parseInt(restockQuantity);
     const newQuantity = { quantity };
-    fetch(`http://localhost:5000/car/${_id}`, {
+    fetch(`http://thawing-headland-66611.herokuapp.com/car/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

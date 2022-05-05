@@ -11,6 +11,7 @@ import Checkout from './Pages/Checkout/Checkout';
 import SignUp from './Pages/SignUp/SignUp';
 import Blogs from './Pages/Blogs/Blogs';
 import CarUpdate from './Pages/CarUpdate/CarUpdate';
+import ManageInventories from './Pages/ManageInventories/ManageInventories';
 
 function App() {
   return (
@@ -18,10 +19,15 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
+
         <Route path='/car/:_id' element={<CarUpdate></CarUpdate>}></Route>
+
+        <Route path='/manageInventories' element={<ManageInventories></ManageInventories>}></Route>
+
         <Route path='/Checkout' element={<RequireAuth>
           <Checkout></Checkout>
         </RequireAuth>}></Route>
+
         <Route path='/Blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>

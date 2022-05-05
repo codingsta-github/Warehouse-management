@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useCars from "../../../Hooks/useCars";
 import Car from '../Car/Car'
 import "./Cars.css";
@@ -13,9 +13,10 @@ const Cars = () => {
       </div>
       <div className="cars">
       {
-          cars.map(car=><Car car={car} key={car._id} ></Car>)
+          cars.slice(0,6).map(car=><Car car={car} key={car._id} ></Car>)
       }
       </div>
+      <Link to={'/manageInventories'}>Manage Inventories</Link>
 
     </div>
   );
