@@ -5,9 +5,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import "./Login.css";
 import SocialLogin from "./SocialLogin/SocialLogin";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { async } from "@firebase/util";
+import axios from "axios";
 const Login = () => {
   const [email, setEmail] = useState([]);
   const [password, setPassword] = useState([]);
@@ -18,7 +19,7 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   if (user) {
-    navigate(from, { replace: true });
+    // navigate(from, { replace: true });
   }
   const handleEmailBlur = (e) => {
     setEmail(e.target.value);
@@ -27,18 +28,25 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const handleUserSignIn = (e) => {
+  const handleUserSignIn = async (e) => {
     e.preventDefault();
 
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+
+    const { data } = await axios.post(
+      `https://mercedez-warehouse.herokuapp.com/login`,
+      { email }
+    );
+    localStorage.setItem('token',data.token);
+    navigate(from, { replace: true });
   };
-  const resetPassword=()=>{
+  const resetPassword = () => {
     if (email) {
-    sendPasswordResetEmail(email)
-    toast('Email sent')
+      sendPasswordResetEmail(email);
+      toast("Email sent");
     }
-  }
-  
+  };
+
   return (
     <div>
       <div className="form-container">
@@ -74,15 +82,13 @@ const Login = () => {
           </p>
           <p>
             Forget password?
-            <button onClick={resetPassword}>
-              Reset Password
-            </button>
+            <button onClick={resetPassword}>Reset Password</button>
           </p>
         </form>
       </div>
 
       <SocialLogin></SocialLogin>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 };

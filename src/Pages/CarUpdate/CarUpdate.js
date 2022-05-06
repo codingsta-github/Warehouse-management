@@ -6,7 +6,7 @@ const CarUpdate = () => {
 
   const [car, setCar] = useState({});
   useEffect(() => {
-    fetch(`http://thawing-headland-66611.herokuapp.com/car/${_id}`)
+    fetch(`https://mercedez-warehouse.herokuapp.com/car/${_id}`)
       .then((res) => res.json())
       .then((data) => setCar(data));
   }, [car.quantity, _id]);
@@ -15,7 +15,7 @@ const CarUpdate = () => {
     const quantity = parseInt(car.quantity) - 1;
     const newQuantity = { quantity };
 
-    fetch(`http://thawing-headland-66611.herokuapp.com/car/${_id}`, {
+    fetch(`https://mercedez-warehouse.herokuapp.com/car/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -38,7 +38,7 @@ const CarUpdate = () => {
     e.preventDefault();
     const quantity = parseInt(car.quantity) + parseInt(restockQuantity);
     const newQuantity = { quantity };
-    fetch(`http://thawing-headland-66611.herokuapp.com/car/${_id}`, {
+    fetch(`https://mercedez-warehouse.herokuapp.com/car/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
