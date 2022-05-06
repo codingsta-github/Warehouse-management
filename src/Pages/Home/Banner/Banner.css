@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300&display=swap');
 .banner {
   position: relative;
 }
@@ -11,39 +14,27 @@
 .details {
   color: white;
   position: absolute;
-  top: 310px;
+  top: 150px;
   left: 160px;
   text-align: left;
-  text-align: center;
+  text-align: left;
   z-index: 1;
   line-height: 1;
+  font-weight: 500;
 }
 .details h1 {
   font-size: 6rem;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-style: italic;
+  font-family: 'BenchNine', sans-serif;
+  text-transform: capitalize;
 }
 
 .details p {
-  font-size: 4rem;
+  font-size: 3rem;
+  margin-top: 50px;
+  font-weight: 300;
 }
 .details span {
   color: #e268e0;
-}
-.details-gym {
-  color: #332467;
-  position: absolute;
-  top: 135px;
-  left: 10px;
-  text-align: left;
-  text-align: center;
-}
-.details-gym h1 {
-  font-size: 32rem;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-style: italic;
 }
 
 @media only screen and (max-width: 600px) {
@@ -64,13 +55,5 @@
   }
   .details p {
     font-size: 1rem;
-  }
-  .details-gym {
-    position: absolute;
-    top: 45px;
-    left: 10px;
-  }
-  .details-gym h1 {
-    font-size: 8rem;
   }
 }

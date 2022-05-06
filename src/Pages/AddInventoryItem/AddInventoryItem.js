@@ -27,7 +27,7 @@ const AddInventoryItem = () => {
     e.preventDefault();
     const newItem = { name, price, quantity, image, details };
 
-    fetch('https://thawing-headland-66611.herokuapp.com/car',{
+    fetch('https://mercedez-warehouse.herokuapp.com/car',{
         method:'POST',
         headers:{
             'content-type':'application/json'

@@ -7,7 +7,7 @@ const ManageInventories = () => {
   const [cars, setCars] = useCars();
 
   const removeItem = (id) => {
-    fetch(`https://thawing-headland-66611.herokuapp.com/car/${id}`, {
+    fetch(`https://mercedez-warehouse.herokuapp.com/car/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
