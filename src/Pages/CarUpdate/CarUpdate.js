@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const CarUpdate = () => {
   const { _id } = useParams();
@@ -67,6 +67,9 @@ const CarUpdate = () => {
         />
         <input type="submit" value="restock" />
       </form>
+
+
+      <Link to={'/manageInventories'}>Manage Inventories</Link>
     </div>
   );
 };

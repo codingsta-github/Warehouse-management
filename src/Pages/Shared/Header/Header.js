@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCheck } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { signOut } from "firebase/auth";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
@@ -15,27 +18,21 @@ const Header = () => {
     <>
       <Navbar bg="dark"
         variant="dark"
-        sticky="top">
+       >
         <Container>
           <Navbar.Brand href="#home"><img src="logo.png" width="80px" className="me-5 p-2" alt="" />
             Mercedes-Benz</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
+            
           <Nav>
               {user ? (
-                <button onClick={handleSignOut}>Sign out</button>
+                <Nav.Link onClick={handleSignOut} className="fs-2 bg-dark text-light"><FontAwesomeIcon icon={faUserCheck} /></Nav.Link>
               ) : (
-                <Nav.Link as={Link} to="/login">
-                  Login
+                <Nav.Link as={Link} to="/login" className="fs-2 bg-dark text-light"><FontAwesomeIcon icon={faUser} />
                 </Nav.Link>
               )}
-              {user ? (
-                <></>
-              ) : (
-                <Nav.Link as={Link} to="/signup">
-                  Signup
-                </Nav.Link>
-              )}
+              
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -55,8 +52,27 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto ">
-              <Nav.Link href="Home#features">Features</Nav.Link>
-              <Nav.Link href="home#cars">Cars</Nav.Link>
+              <Nav.Link href="Home#features" className=" text-light">Features</Nav.Link>
+              <Nav.Link href="home#cars"  className=" text-light">Cars</Nav.Link>
+            </Nav>
+
+            <Nav>
+              {user ? (
+                <Nav.Link as={Link} to="/manageInventories" className="bg-dark text-light">Manage Items</Nav.Link>
+              ):<></>}
+              
+            </Nav>
+            <Nav>
+              {user ? (
+                <Nav.Link as={Link} to="/addInventoryItem" className="bg-dark text-light">Add Items</Nav.Link>
+              ):<></>}
+              
+            </Nav>
+            <Nav>
+              {user ? (
+                <Nav.Link as={Link} to="/manageInventories" className="bg-dark text-light">My Items</Nav.Link>
+              ):<></>}
+              
             </Nav>
             
           </Navbar.Collapse>
