@@ -29,7 +29,7 @@ const ManageInventories = () => {
       <h1>Manage Inventories</h1>
 
       <div className="table">
-      <Table responsive>
+      <Table responsive >
         <thead >
           <tr>
             <th>Car</th>
