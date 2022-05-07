@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashArrowUp } from '@fortawesome/free-solid-svg-icons'
 import React from "react";
 import { Table } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
@@ -46,7 +48,7 @@ const ManageInventories = () => {
               <td>{car.price}</td>
               <td>{car.quantity}</td>
               <td>
-                <button onClick={() => removeItem(car._id)}>delete</button>
+                <button onClick={() => removeItem(car._id)} className="remove"><FontAwesomeIcon icon={faTrashArrowUp}/></button>
               </td>
             </tr>
           ))}

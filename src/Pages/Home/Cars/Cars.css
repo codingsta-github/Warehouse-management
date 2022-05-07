@@ -23,7 +23,7 @@
   text-decoration: none;
   display: inline-block;
   margin: 10px;
-  padding: .8rem 2.2rem;
+  padding: .8rem 2.4rem;
   border: 1px solid #0078d6;
   border-radius: 10px;
   color: #0078d6;
@@ -38,19 +38,17 @@
   }
   .car-heading h1 {
     font-size: 2rem;
-  }
-  .car-heading h4 {
-    font-size: 1rem;
-  }
-  .car-cart{
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 2rem;
   }
   .cars {
     margin: 10px auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
+  }
+  .link{
+    font-size: 1.1rem;
+    padding: .6rem 1.8rem;
   }
   
 }
