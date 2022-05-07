@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import './CarUpdate.css'
+import "./CarUpdate.css";
 const CarUpdate = () => {
   const { _id } = useParams();
 
@@ -33,7 +33,7 @@ const CarUpdate = () => {
   const handleChange = (e) => {
     setRestockQuantity(e.target.value);
   };
-  
+
   const restock = (e) => {
     e.preventDefault();
     const quantity = parseInt(car.quantity) + parseInt(restockQuantity);
@@ -52,24 +52,39 @@ const CarUpdate = () => {
   };
 
   return (
-    <div>
-      <h1>car{car.name}</h1>
+    <div className="car-update">
+      <div className="car-details-banner">
+        <div className="car-details">
+          <img src={car.images} alt="" />
+          <div className="details-info">
+            <h1>{car.name}</h1>
+            <p>starting from &#x20B9; {car.price}</p>
+            <p>Available cars {car.quantity}</p>
+            <button onClick={delivered} className="delivered">
+              delivered
+            </button>
+            <h4>Want to restock? </h4>
+            <form action="" onSubmit={restock}>
+              <input
+                type="number"
+                placeholder="Type the quantity"
+                onBlur={handleChange}
+                required
+              />
+              <input type="submit" value="restock" className="car-button"/>
+            </form>
+          </div>
+        </div>
 
-      <h1>quantity : {car.quantity}</h1>
-      <button onClick={delivered}>delivered</button>
+        <div className="car-description">
+          <h6>{car.details}</h6>
+          <Link to={"/manageInventories"} className="link">
+        Manage Inventories
+      </Link>
+        </div>
+      </div>
 
-      <form action="" onSubmit={restock}>
-        <input
-          type="number"
-          placeholder="restock"
-          onBlur={handleChange}
-          required
-        />
-        <input type="submit" value="restock" />
-      </form>
-
-
-      <Link to={'/manageInventories'} className="link">Manage Inventories</Link>
+      
     </div>
   );
 };
