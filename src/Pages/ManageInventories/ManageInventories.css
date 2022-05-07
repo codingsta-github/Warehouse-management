@@ -1,29 +1,33 @@
-.manage-inventories{
-    max-width: 1440px;
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
+.manage-inventories {
+  max-width: 1440px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
 }
-.manage-inventories h1{
+.manage-inventories h1 {
   font-size: 4rem;
   font-family: "Oswald", sans-serif;
   text-transform: capitalize;
   text-align: center;
 }
-.table{
-    padding: 0 10px;
+.table {
+  padding: 0 10px;
 }
-.add-item{
-    display: inline-block;
-    margin: 0 auto;
+.add-item {
+  display: inline-block;
+  margin: 0 auto;
 }
-.remove{
-    background-color: white;
-    border: none;
+.remove {
+  background-color: white;
+  border: none;
 }
 
-@media only screen and (max-width: 600px){
-    .table{
-        font-size: 12px!important;
-    }
+@media only screen and (max-width: 600px) {
+  .table {
+    font-size: 12px !important;
+  }
+  .manage-inventories h1 {
+    font-size: 30px !important;
+    margin: 10px 20px !important;
+  }
 }

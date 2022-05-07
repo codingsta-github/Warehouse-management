@@ -1,4 +1,9 @@
-.blogs{
-    margin: 50px;
-    font-size: 1.2rem;
+.blogs {
+  margin: 50px;
+  font-size: 1.2rem;
+}
+@media only screen and (max-width: 600px){
+    .blogs{
+        margin: 50px 20px !important;
+    }
 }

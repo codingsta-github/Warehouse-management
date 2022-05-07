@@ -71,7 +71,7 @@ const CarUpdate = () => {
                 onBlur={handleChange}
                 required
               />
-              <input type="submit" value="restock" className="button"/>
+              <input type="submit" value="restock" className="button" />
             </form>
           </div>
         </div>
@@ -79,12 +79,10 @@ const CarUpdate = () => {
         <div className="car-description">
           <h6>{car.details}</h6>
           <Link to={"/manageInventories"} className="link">
-        Manage Inventories
-      </Link>
+            Manage Inventories
+          </Link>
         </div>
       </div>
-
-      
     </div>
   );
 };

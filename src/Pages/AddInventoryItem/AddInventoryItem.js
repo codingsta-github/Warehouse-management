@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import './AddInventoryItem.css'
+import "./AddInventoryItem.css";
 const AddInventoryItem = () => {
   const [name, setName] = useState([]);
   const [price, setPrice] = useState([]);
@@ -45,32 +45,55 @@ const AddInventoryItem = () => {
     <div className="add-item-container">
       <h1>Add Inventory Item</h1>
       <div className="form-container">
-      
+        <Form onSubmit={addNewItem}>
+          <Form.Group className="m-3">
+            <Form.Label>Enter Car Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Example : C-Class"
+              required
+              onBlur={onNameBlur}
+            />
+          </Form.Group>
+          <Form.Group className="m-3">
+            <Form.Label>Enter Car Price</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="Example : &#x20B9; 10000000"
+              required
+              onBlur={onPriceBlur}
+            />
+          </Form.Group>
+          <Form.Group className="m-3">
+            <Form.Label>Enter Car Quantity</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="Example : 200"
+              required
+              onBlur={onQuantityBlur}
+            />
+          </Form.Group>
+          <Form.Group className="m-3">
+            <Form.Label>Car Details</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="example@example.com"
+              required
+              onBlur={onDetailsBlur}
+            />
+          </Form.Group>
+          <Form.Group className="m-3">
+            <Form.Label>Car Image URL</Form.Label>
+            <Form.Control
+              type="url"
+              placeholder="https://example.com"
+              required
+              onBlur={onImageBlur}
+            />
+          </Form.Group>
 
-      <Form onSubmit={addNewItem}>
-        <Form.Group className="m-3">
-          <Form.Label>Enter Car Name</Form.Label>
-          <Form.Control type="text" placeholder="Example : C-Class" required onBlur={onNameBlur}/>
-        </Form.Group>
-        <Form.Group className="m-3">
-          <Form.Label>Enter Car Price</Form.Label>
-          <Form.Control type="number" placeholder="Example : &#x20B9; 10000000" required onBlur={onPriceBlur}/>
-        </Form.Group>
-        <Form.Group className="m-3">
-          <Form.Label>Enter Car Quantity</Form.Label>
-          <Form.Control type="number" placeholder="Example : 200" required onBlur={onQuantityBlur}/>
-        </Form.Group>
-        <Form.Group className="m-3">
-          <Form.Label>Car Details</Form.Label>
-          <Form.Control type="text" placeholder="example@example.com" required onBlur={onDetailsBlur}/>
-        </Form.Group>
-        <Form.Group className="m-3">
-          <Form.Label>Car Image URL</Form.Label>
-          <Form.Control type="url" placeholder="https://example.com" required onBlur={onImageBlur}/>
-        </Form.Group>
-
-        <input type="submit" value="Add Item +" className="link"/>
-      </Form>
+          <input type="submit" value="Add Item +" className="link" />
+        </Form>
       </div>
     </div>
   );

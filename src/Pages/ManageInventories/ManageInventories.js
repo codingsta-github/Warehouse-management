@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faTrashArrowUp } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { Table } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import useCars from "../../Hooks/useCars";
-import './ManageInventories.css'
+import "./ManageInventories.css";
 const ManageInventories = () => {
   const [cars, setCars] = useCars();
 
@@ -21,7 +21,7 @@ const ManageInventories = () => {
 
   const navigate = useNavigate();
   const addNewItem = () => {
-    navigate('/addInventoryItem')
+    navigate("/addInventoryItem");
   };
 
   return (
@@ -29,34 +29,44 @@ const ManageInventories = () => {
       <h1>Manage Inventories</h1>
 
       <div className="table">
-      <Table responsive >
-        <thead >
-          <tr>
-            <th>Car</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-
-        <tbody className="align-middle">
-          {cars.map((car) => (
-            <tr key={car._id}>
-              <td><img src={car.images} height="50px" alt="" /></td>
-              <td>{car.name}</td>
-              <td>{car.price}</td>
-              <td>{car.quantity}</td>
-              <td>
-                <button onClick={() => removeItem(car._id)} className="remove"><FontAwesomeIcon icon={faTrashArrowUp}/></button>
-              </td>
+        <Table responsive>
+          <thead>
+            <tr>
+              <th>Car</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Action</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
+          </thead>
+
+          <tbody className="align-middle">
+            {cars.map((car) => (
+              <tr key={car._id}>
+                <td>
+                  <img src={car.images} height="50px" alt="" />
+                </td>
+                <td>{car.name}</td>
+                <td>{car.price}</td>
+                <td>{car.quantity}</td>
+                <td>
+                  <button
+                    onClick={() => removeItem(car._id)}
+                    className="remove"
+                  >
+                    <FontAwesomeIcon icon={faTrashArrowUp} />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
       </div>
       <div className="add-item">
-      <Link to={'/addInventoryItem'} className="link"> Add New Item + </Link>
+        <Link to={"/addInventoryItem"} className="link">
+          {" "}
+          Add New Item +{" "}
+        </Link>
       </div>
     </div>
   );

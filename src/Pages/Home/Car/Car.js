@@ -10,9 +10,7 @@ const Car = (props) => {
   return (
     <div className="car">
       <h1>{name}</h1>
-      <p>
-        starting from &#x20B9; {price} 
-      </p>
+      <p>starting from &#x20B9; {price}</p>
       <button className="button" onClick={updateCar}>
         update
       </button>
