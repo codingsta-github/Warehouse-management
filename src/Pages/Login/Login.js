@@ -9,6 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { async } from "@firebase/util";
 import axios from "axios";
+import { Form } from "react-bootstrap";
 const Login = () => {
   const [email, setEmail] = useState([]);
   const [password, setPassword] = useState([]);
@@ -37,7 +38,7 @@ const Login = () => {
       `https://mercedez-warehouse.herokuapp.com/login`,
       { email }
     );
-    localStorage.setItem('token',data.token);
+    localStorage.setItem("token", data.token);
     navigate(from, { replace: true });
   };
   const resetPassword = () => {
@@ -50,41 +51,45 @@ const Login = () => {
   return (
     <div>
       <div className="form-container">
-        <form onSubmit={handleUserSignIn} action="">
-          <h1 className="form-title">Login</h1>
-          <div className="input-group">
-            <label htmlFor="email">Email</label>
-            <input
-              onBlur={handleEmailBlur}
+        <Form onSubmit={handleUserSignIn}>
+          <h1 className="text-center">Login</h1>
+          <Form.Group className="m-3">
+            <Form.Label>Enter your email</Form.Label>
+            <Form.Control
               type="email"
-              name="email"
-              id=""
+              placeholder="example@example.com"
               required
+              onBlur={handleEmailBlur}
             />
-          </div>
-          <div className="input-group">
-            <label htmlFor="password">Password</label>
-            <input
-              onBlur={handlePasswordBlur}
+          </Form.Group>
+          <Form.Group className="m-3">
+            <Form.Label>Enter your password</Form.Label>
+            <Form.Control
               type="password"
-              name="password"
-              id=""
+              placeholder="Example :abc@656#1_"
+              required
+              onBlur={handlePasswordBlur}
             />
-            <p>{error?.message}</p>
-            {loading && <p>loading...</p>}
-          </div>
-          <input type="submit" className="form-submit" value="Login" />
+          </Form.Group>
+
+          <input type="submit" value="Login" className="button" />
+          <p>{error?.message}</p>
+          {loading && <p>loading...</p>}
+        </Form>
+        <div className="ms-3">
           <p>
-            New to Ema-john?{" "}
+            New to Mercedes-Benz?{" "}
             <Link className="form-link" to="/signup">
               Create account
             </Link>{" "}
           </p>
           <p>
             Forget password?
-            <button onClick={resetPassword}>Reset Password</button>
+            <button onClick={resetPassword} className="button">
+              Reset Password
+            </button>
           </p>
-        </form>
+        </div>
       </div>
 
       <SocialLogin></SocialLogin>

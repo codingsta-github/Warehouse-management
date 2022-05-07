@@ -13,7 +13,7 @@ const Car = (props) => {
       <p>
         starting from &#x20B9; {price} 
       </p>
-      <button className="car-button" onClick={updateCar}>
+      <button className="button" onClick={updateCar}>
         update
       </button>
       <img src={images} width="100%" alt="" />

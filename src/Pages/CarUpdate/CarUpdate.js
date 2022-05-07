@@ -60,7 +60,7 @@ const CarUpdate = () => {
             <h1>{car.name}</h1>
             <p>starting from &#x20B9; {car.price}</p>
             <p>Available cars {car.quantity}</p>
-            <button onClick={delivered} className="delivered">
+            <button onClick={delivered} className="button">
               delivered
             </button>
             <h4>Want to restock? </h4>
@@ -71,7 +71,7 @@ const CarUpdate = () => {
                 onBlur={handleChange}
                 required
               />
-              <input type="submit" value="restock" className="car-button"/>
+              <input type="submit" value="restock" className="button"/>
             </form>
           </div>
         </div>

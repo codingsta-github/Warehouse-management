@@ -5,7 +5,7 @@ const AddInventoryItem = () => {
   const [name, setName] = useState([]);
   const [price, setPrice] = useState([]);
   const [quantity, setQuantity] = useState([]);
-  const [image, setImage] = useState([]);
+  const [images, setImages] = useState([]);
   const [details, setDetails] = useState([]);
 
   const onNameBlur = (e) => {
@@ -18,7 +18,7 @@ const AddInventoryItem = () => {
     setQuantity(e.target.value);
   };
   const onImageBlur = (e) => {
-    setImage(e.target.value);
+    setImages(e.target.value);
   };
   const onDetailsBlur = (e) => {
     setDetails(e.target.value);
@@ -26,7 +26,7 @@ const AddInventoryItem = () => {
 
   const addNewItem = (e) => {
     e.preventDefault();
-    const newItem = { name, price, quantity, image, details };
+    const newItem = { name, price, quantity, images, details };
 
     fetch("https://mercedez-warehouse.herokuapp.com/car", {
       method: "POST",
@@ -45,47 +45,31 @@ const AddInventoryItem = () => {
     <div className="add-item-container">
       <h1>Add Inventory Item</h1>
       <div className="form-container">
-      {/* <form action="" onSubmit={addNewItem}>
-        <input type="text" placeholder="name" onBlur={onNameBlur} required />
-        <input
-          type="number"
-          placeholder="price"
-          onBlur={onPriceBlur}
-          required
-        />
-        <input
-          type="number"
-          placeholder="quantity"
-          onBlur={onQuantityBlur}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Image link"
-          onBlur={onImageBlur}
-          required
-        />
-        <input
-          type="text"
-          placeholder="details"
-          onBlur={onDetailsBlur}
-          required
-        />
-        <input type="submit" value="Add New Item" />
-      </form> */}
+      
 
-      <Form>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
+      <Form onSubmit={addNewItem}>
+        <Form.Group className="m-3">
+          <Form.Label>Enter Car Name</Form.Label>
+          <Form.Control type="text" placeholder="Example : C-Class" required onBlur={onNameBlur}/>
+        </Form.Group>
+        <Form.Group className="m-3">
+          <Form.Label>Enter Car Price</Form.Label>
+          <Form.Control type="number" placeholder="Example : &#x20B9; 10000000" required onBlur={onPriceBlur}/>
+        </Form.Group>
+        <Form.Group className="m-3">
+          <Form.Label>Enter Car Quantity</Form.Label>
+          <Form.Control type="number" placeholder="Example : 200" required onBlur={onQuantityBlur}/>
+        </Form.Group>
+        <Form.Group className="m-3">
+          <Form.Label>Car Details</Form.Label>
+          <Form.Control type="text" placeholder="example@example.com" required onBlur={onDetailsBlur}/>
+        </Form.Group>
+        <Form.Group className="m-3">
+          <Form.Label>Car Image URL</Form.Label>
+          <Form.Control type="url" placeholder="https://example.com" required onBlur={onImageBlur}/>
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+        <input type="submit" value="Add Item +" className="link"/>
       </Form>
       </div>
     </div>
