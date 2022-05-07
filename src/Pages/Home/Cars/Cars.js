@@ -17,7 +17,7 @@ const Cars = () => {
           cars.slice(0,6).map(car=><Car car={car} key={car._id} ></Car>)
       }
       </div>
-      <Link to={'/manageInventories'}>Manage Inventories</Link>
+      <Link to={'/manageInventories'} className="link"> > Manage Inventories</Link>
 
     </div>
   );

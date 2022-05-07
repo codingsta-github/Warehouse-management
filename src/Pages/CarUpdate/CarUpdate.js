@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-
+import './CarUpdate.css'
 const CarUpdate = () => {
   const { _id } = useParams();
 
@@ -69,7 +69,7 @@ const CarUpdate = () => {
       </form>
 
 
-      <Link to={'/manageInventories'}>Manage Inventories</Link>
+      <Link to={'/manageInventories'} className="link">Manage Inventories</Link>
     </div>
   );
 };
