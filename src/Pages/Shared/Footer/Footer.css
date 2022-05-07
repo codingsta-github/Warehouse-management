@@ -2,6 +2,12 @@
   padding: 50px 0;
   height: 200px;
   color: white;
-  background-color: #332467;
+  background-color: #212529;
   text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding: 20px 0 !important;
+    margin-top: 50px !important;
+  }
 }
