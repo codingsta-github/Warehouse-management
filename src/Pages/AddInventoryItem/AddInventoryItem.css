@@ -1,0 +1,11 @@
+.add-item-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.add-item-container h1 {
+  font-size: 4rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
+  text-align: center;
+}
+

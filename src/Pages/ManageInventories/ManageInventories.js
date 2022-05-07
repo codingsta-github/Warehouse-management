@@ -1,8 +1,8 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useCars from "../../Hooks/useCars";
-
+import './ManageInventories.css'
 const ManageInventories = () => {
   const [cars, setCars] = useCars();
 
@@ -23,12 +23,14 @@ const ManageInventories = () => {
   };
 
   return (
-    <div>
-      <h1>ManageInventories</h1>
+    <div className="manage-inventories">
+      <h1>Manage Inventories</h1>
 
+      <div className="table">
       <Table responsive>
-        <thead>
+        <thead >
           <tr>
+            <th>Car</th>
             <th>Name</th>
             <th>Price</th>
             <th>Quantity</th>
@@ -36,9 +38,10 @@ const ManageInventories = () => {
           </tr>
         </thead>
 
-        <tbody>
+        <tbody className="align-middle">
           {cars.map((car) => (
             <tr key={car._id}>
+              <td><img src={car.images} height="50px" alt="" /></td>
               <td>{car.name}</td>
               <td>{car.price}</td>
               <td>{car.quantity}</td>
@@ -49,7 +52,10 @@ const ManageInventories = () => {
           ))}
         </tbody>
       </Table>
-      <button onClick={addNewItem}>Add new item</button>
+      </div>
+      <div className="add-item">
+      <Link to={'/addInventoryItem'} className="link"> Add New Item + </Link>
+      </div>
     </div>
   );
 };

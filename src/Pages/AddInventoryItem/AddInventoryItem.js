@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import { Button, Form } from "react-bootstrap";
+import './AddInventoryItem.css'
 const AddInventoryItem = () => {
   const [name, setName] = useState([]);
   const [price, setPrice] = useState([]);
@@ -27,23 +28,24 @@ const AddInventoryItem = () => {
     e.preventDefault();
     const newItem = { name, price, quantity, image, details };
 
-    fetch('https://mercedez-warehouse.herokuapp.com/car',{
-        method:'POST',
-        headers:{
-            'content-type':'application/json'
-
-        },
-        body:JSON.stringify(newItem)
+    fetch("https://mercedez-warehouse.herokuapp.com/car", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newItem),
     })
-    .then(res=>res.json())
-    .then(data=>{console.log(data);})
-
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
-    <div>
+    <div className="add-item-container">
       <h1>Add Inventory Item</h1>
-      <form action="" onSubmit={addNewItem}>
+      <div className="form-container">
+      {/* <form action="" onSubmit={addNewItem}>
         <input type="text" placeholder="name" onBlur={onNameBlur} required />
         <input
           type="number"
@@ -70,7 +72,22 @@ const AddInventoryItem = () => {
           required
         />
         <input type="submit" value="Add New Item" />
-      </form>
+      </form> */}
+
+      <Form>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+      </div>
     </div>
   );
 };
