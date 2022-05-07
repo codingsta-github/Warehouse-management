@@ -6,12 +6,13 @@ import "./Cars.css";
 const Cars = () => {
   const [cars, setCars] = useCars();
   return (
-    <div className="service-container" id="cars">
-      <div className="service-heading">
+    <div className="car-container" id="cars">
+      <div className="car-heading">
       <h1>Inventory Items</h1>
-      <h4>Update Item</h4>
       </div>
+      
       <div className="cars">
+        
       {
           cars.slice(0,6).map(car=><Car car={car} key={car._id} ></Car>)
       }

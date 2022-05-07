@@ -20,16 +20,16 @@ const Header = () => {
         variant="dark"
        >
         <Container>
-          <Navbar.Brand href="#home"><img src="logo.png" width="80px" className="me-5 p-2" alt="" />
+          <Navbar.Brand as={Link} to="/"><img src="logo.png" width="80px" className="me-5 p-2" alt="" />
             Mercedes-Benz</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             
           <Nav>
               {user ? (
-                <Nav.Link onClick={handleSignOut} className="fs-2 bg-dark text-light"><FontAwesomeIcon icon={faUserCheck} /></Nav.Link>
+                <Nav.Link onClick={handleSignOut} className="fs-4 bg-dark text-light"><FontAwesomeIcon icon={faUserCheck} /></Nav.Link>
               ) : (
-                <Nav.Link as={Link} to="/login" className="fs-2 bg-dark text-light"><FontAwesomeIcon icon={faUser} />
+                <Nav.Link as={Link} to="/login" className="fs-4 bg-dark text-light"><FontAwesomeIcon icon={faUser} />
                 </Nav.Link>
               )}
               
@@ -52,25 +52,26 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto ">
-              <Nav.Link href="Home#features" className=" text-light">Features</Nav.Link>
-              <Nav.Link href="home#cars"  className=" text-light">Cars</Nav.Link>
+              <Nav.Link as={Link} to="/cars" className=" text-light">Cars</Nav.Link>
+              <Nav.Link as={Link} to="/#recommendation" className=" text-light">Recommendation</Nav.Link>
+              <Nav.Link as={Link} to="/blogs" className=" text-light">Blog</Nav.Link>
             </Nav>
 
             <Nav>
               {user ? (
-                <Nav.Link as={Link} to="/manageInventories" className="bg-dark text-light">Manage Items</Nav.Link>
+                <Nav.Link as={Link} to="/manageInventories" className="fs-6 bg-dark text-light">Manage Items</Nav.Link>
               ):<></>}
               
             </Nav>
             <Nav>
               {user ? (
-                <Nav.Link as={Link} to="/addInventoryItem" className="bg-dark text-light">Add Items</Nav.Link>
+                <Nav.Link as={Link} to="/addInventoryItem" className="fs-6 bg-dark text-light">Add Items</Nav.Link>
               ):<></>}
               
             </Nav>
             <Nav>
               {user ? (
-                <Nav.Link as={Link} to="/manageInventories" className="bg-dark text-light">My Items</Nav.Link>
+                <Nav.Link as={Link} to="/manageInventories" className="fs-6 bg-dark text-light">My Items</Nav.Link>
               ):<></>}
               
             </Nav>

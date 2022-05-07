@@ -1,59 +1,38 @@
-.service-container {
+.car-container {
   padding: 80px 0;
-  color: white;
-  background-color: #332467;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.service-heading h1 {
+.car-heading h1 {
+  margin-bottom: 6rem;
   font-size: 5rem;
   font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-style: italic;
+  text-transform: capitalize;
   text-align: center;
-}
-.service-heading h4 {
-  font-size: 1.5rem;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  color: #e268e0;
 }
 .cars {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 50px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
 }
-.cart-container{
-  flex-basis: 30%;
-}
-.more-programs {
-  text-decoration: none;
-  padding: 20px 40px;
-  border: none;
-  border-radius: 40px;
-  background-color: #62d0df;
-  color: white;
-  font-size: 1rem;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-}
-
 @media only screen and (max-width: 600px){
-  .service-container {
+  .car-container {
     padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .service-heading h1 {
+  .car-heading h1 {
     font-size: 2rem;
   }
-  .service-heading h4 {
+  .car-heading h4 {
     font-size: 1rem;
   }
-  .service-cart{
+  .car-cart{
     display: flex;
     flex-direction: column;
   }

@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login";
 import NotFound from "./Pages/NotFound/NotFound";
 import RequireAuth from "./Pages/RequireAuth/RequireAuth";
@@ -11,6 +10,8 @@ import Blogs from "./Pages/Blogs/Blogs";
 import CarUpdate from "./Pages/CarUpdate/CarUpdate";
 import ManageInventories from "./Pages/ManageInventories/ManageInventories";
 import AddInventoryItem from "./Pages/AddInventoryItem/AddInventoryItem";
+import Home from "./Pages/Home/Home";
+import Cars from "./Pages/Home/Cars/Cars";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/cars" element={<Cars></Cars>}></Route>
 
         <Route path="/car/:_id" element={<CarUpdate></CarUpdate>}></Route>
 
@@ -40,7 +42,7 @@ function App() {
         ></Route>
 
 
-        <Route path="/Blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
