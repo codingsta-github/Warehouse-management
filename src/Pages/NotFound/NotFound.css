@@ -8,6 +8,7 @@
 }
 .not-found h1{
     font-size: 8rem;
+    font-family: "BenchNine", sans-serif;
 }
 @media only screen and (max-width: 600px){
     .not-found {

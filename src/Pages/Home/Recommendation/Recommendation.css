@@ -1,0 +1,22 @@
+.recommendation {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+.recommendation h1 {
+  font-family: "BenchNine", sans-serif;
+  margin: 50px auto;
+}
+@media only screen and (max-width: 600px) {
+  .recommendation {
+    max-width: 95vw;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .recommendation img{
+      width: 90vw!important;
+  }
+  .recommendation h1 {
+    text-align: center!important;
+  }
+}

@@ -77,7 +77,7 @@ const AddInventoryItem = () => {
             <Form.Label>Car Details</Form.Label>
             <Form.Control
               type="text"
-              placeholder="example@example.com"
+              placeholder="Details about car"
               required
               onBlur={onDetailsBlur}
             />

@@ -21,11 +21,10 @@
   font-size: 1.5rem;
   text-decoration: none;
   display: inline-block;
-  margin: 10px;
+  margin: 10px 0;
   padding: 0.8rem 2.2rem;
-  border: 1px solid #0078d6;
-  border-radius: 10px;
-  color: #0078d6;
+  border: 1px solid #1d726e;
+  color: #1d726e;
 }
 .details-info {
   display: flex;

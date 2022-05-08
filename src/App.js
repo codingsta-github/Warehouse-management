@@ -12,6 +12,7 @@ import ManageInventories from "./Pages/ManageInventories/ManageInventories";
 import AddInventoryItem from "./Pages/AddInventoryItem/AddInventoryItem";
 import Home from "./Pages/Home/Home";
 import Cars from "./Pages/Home/Cars/Cars";
+import Recommendation from "./Pages/Home/Recommendation/Recommendation";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/cars" element={<Cars></Cars>}></Route>
+        <Route path="/recommendation" element={<Recommendation></Recommendation>}></Route>
 
         <Route path="/car/:_id" element={<RequireAuth><CarUpdate></CarUpdate></RequireAuth>}></Route>
 

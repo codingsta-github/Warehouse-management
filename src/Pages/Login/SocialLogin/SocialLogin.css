@@ -1,16 +1,21 @@
-.social-login{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.social-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.social-login-div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.social-login-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.div{
-    margin: 0 10px;
-    background-color: #0078d6;
-    height: 1px;
-    width: 200px;
+.div {
+  margin: 0 10px;
+  background-color: #0078d6;
+  height: 1px;
+  width: 200px;
+}
+@media only screen and (max-width: 600px) {
+  .div {
+    width: 35vw;
+  }
 }
