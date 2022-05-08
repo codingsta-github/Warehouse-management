@@ -16,9 +16,7 @@ const SignUp = () => {
 
   const navigate = useNavigate();
   
-  if (user) {
-    navigate("/");
-  }
+  
   const handleNameBlur = (e) => {
     setName(e.target.value);
   };
@@ -43,8 +41,11 @@ const SignUp = () => {
     }
     createUserWithEmailAndPassword(email, password).then((result) => {
       const user = result.user;
-      console.log(user);
+      if (user) {
+        navigate("/");
+      }
     });
+    e.target.reset();
   };
   return (
     <div>

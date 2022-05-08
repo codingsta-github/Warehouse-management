@@ -38,6 +38,7 @@ const CarUpdate = () => {
     e.preventDefault();
     const quantity = parseInt(car.quantity) + parseInt(restockQuantity);
     const newQuantity = { quantity };
+    
     fetch(`https://mercedez-warehouse.herokuapp.com/car/${_id}`, {
       method: "PUT",
       headers: {
@@ -45,10 +46,13 @@ const CarUpdate = () => {
       },
       body: JSON.stringify(newQuantity),
     })
+    
       .then((res) => res.json())
       .then((data) => {
+        
         setCar(data);
       });
+      e.target.reset();
   };
 
   return (

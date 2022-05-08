@@ -38,6 +38,7 @@ const Login = () => {
     );
     localStorage.setItem("token", data.token);
     navigate(from, { replace: true });
+    e.target.reset();
   };
   const resetPassword = () => {
     if (email) {

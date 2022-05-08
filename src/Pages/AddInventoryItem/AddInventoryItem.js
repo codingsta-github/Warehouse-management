@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 import "./AddInventoryItem.css";
 const AddInventoryItem = () => {
   const [name, setName] = useState([]);
+  // const [email, setEmail] = useState([]);
   const [price, setPrice] = useState([]);
   const [quantity, setQuantity] = useState([]);
   const [images, setImages] = useState([]);
   const [details, setDetails] = useState([]);
-
+  const [user] = useAuthState(auth);
+  const email=user.email
   const onNameBlur = (e) => {
     setName(e.target.value);
   };
   const onPriceBlur = (e) => {
-    setPrice(e.target.value);
+    setPrice(parseInt(e.target.value));
   };
   const onQuantityBlur = (e) => {
-    setQuantity(e.target.value);
+    setQuantity(parseInt(e.target.value));
   };
   const onImageBlur = (e) => {
     setImages(e.target.value);
@@ -26,7 +30,7 @@ const AddInventoryItem = () => {
 
   const addNewItem = (e) => {
     e.preventDefault();
-    const newItem = { name, price, quantity, images, details };
+    const newItem = { name, email, price, quantity, images, details };
 
     fetch("https://mercedez-warehouse.herokuapp.com/car", {
       method: "POST",
@@ -39,6 +43,7 @@ const AddInventoryItem = () => {
       .then((data) => {
         console.log(data);
       });
+    e.target.reset();
   };
 
   return (
@@ -89,6 +94,15 @@ const AddInventoryItem = () => {
               placeholder="https://example.com"
               required
               onBlur={onImageBlur}
+            />
+          </Form.Group>
+          <Form.Group className="m-3">
+            <Form.Label>Your Email</Form.Label>
+            <Form.Control
+              type="email"
+              required
+              value={email}
+              readOnly
             />
           </Form.Group>
 
