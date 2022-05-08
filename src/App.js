@@ -21,7 +21,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/cars" element={<Cars></Cars>}></Route>
 
-        <Route path="/car/:_id" element={<CarUpdate></CarUpdate>}></Route>
+        <Route path="/car/:_id" element={<RequireAuth><CarUpdate></CarUpdate></RequireAuth>}></Route>
 
         <Route
           path="/manageInventories"

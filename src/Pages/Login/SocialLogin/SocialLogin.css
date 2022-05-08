@@ -1,11 +1,16 @@
 .social-login{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-login-div{
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 .div{
     margin: 0 10px;
-    background-color: #e268e0;
+    background-color: #0078d6;
     height: 1px;
     width: 200px;
 }

@@ -88,9 +88,10 @@ const Login = () => {
             </button>
           </p>
         </div>
+        <SocialLogin></SocialLogin>
       </div>
 
-      <SocialLogin></SocialLogin>
+      
       <ToastContainer />
     </div>
   );

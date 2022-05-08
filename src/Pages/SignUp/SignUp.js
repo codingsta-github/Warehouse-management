@@ -17,7 +17,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   
   if (user) {
-    navigate("/home");
+    navigate("/");
   }
   const handleNameBlur = (e) => {
     setName(e.target.value);
@@ -52,10 +52,10 @@ const SignUp = () => {
         <Form onSubmit={handleCreateUser}>
           <h1 className="text-center">Sign Up</h1>
           <Form.Group className="m-3">
-            <Form.Label>Your name</Form.Label>
+            <Form.Label> Enter your name</Form.Label>
             <Form.Control
               type="text"
-              placeholder="example@example.com"
+              placeholder="Your name"
               required
               onBlur={handleNameBlur}
             />
@@ -73,7 +73,7 @@ const SignUp = () => {
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
-              placeholder="Example :abc@656#1_"
+              placeholder="Example : abc@656#1_dd"
               required
               onBlur={handlePasswordBlur}
             />
@@ -82,7 +82,7 @@ const SignUp = () => {
             <Form.Label>Confirm password</Form.Label>
             <Form.Control
               type="password"
-              placeholder="Example :abc@656#1_"
+              placeholder="Example : abc@656#1_dd"
               required
               onBlur={handleConfirmPasswordBlur}
             />
@@ -99,8 +99,9 @@ const SignUp = () => {
             </Link>{" "}
           </p>
         </div>
+        <SocialLogin></SocialLogin>
       </div>
-      <SocialLogin></SocialLogin>
+      
     </div>
   );
 };
