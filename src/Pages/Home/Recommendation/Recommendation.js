@@ -9,7 +9,7 @@ const Recommendation = () => {
   return (
     <div className="recommendation">
       <h1>Our recommendations</h1>
-      <Row xs={1} md={2} className="g-4 mx-2">
+      <div className="recommendation-container">
           <Col className="p-0 m-2">
             <Card>
               <Card.Img variant="top" src={re1} />
@@ -46,7 +46,7 @@ const Recommendation = () => {
               <Link to={'/'} className="link">Explore Offers</Link>
             </Card>
           </Col>
-      </Row>
+      </div>
     </div>
   );
 };
