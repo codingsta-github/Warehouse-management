@@ -15,7 +15,7 @@ const Recommendation = () => {
               <Card.Img variant="top" src={re1} />
               <Card.Body>
                 <Card.Title>Pre-Owned cars</Card.Title>
-                <Card.Text>
+                <Card.Text className="fs-4">
                 Find your dream car with Mercedes-Benz pre-owned cars.
                 </Card.Text>
               </Card.Body>
@@ -27,8 +27,8 @@ const Recommendation = () => {
               <Card.Img variant="top" src={re2} />
               <Card.Body>
                 <Card.Title>Stylish. Just like you.</Card.Title>
-                <Card.Text>
-                The all-new Mercedes-Benz A-Class Limousine.
+                <Card.Text className="fs-4">
+                The all-new Mercedes-Benz A-Class Limousine for you. Like it.
                 </Card.Text>
               </Card.Body>
               <Link to={'/'} className="link">Explore Offers</Link>
@@ -39,7 +39,7 @@ const Recommendation = () => {
               <Card.Img variant="top" src={re3} />
               <Card.Body>
                 <Card.Title>The Mercedes-Benz GLC</Card.Title>
-                <Card.Text>
+                <Card.Text className="fs-4">
                 Takes you to the most beautiful places . Connects you worldwide.
                 </Card.Text>
               </Card.Body>
