@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "./Banner/Banner";
 import Cars from "./Cars/Cars";
-import Features from "./Features/Features";
+import Disclaimer from "./Disclaimer/Disclaimer";
 import "./Home.css";
 import Recommendation from "./Recommendation/Recommendation";
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
       <Banner></Banner>
       <Recommendation></Recommendation>
       <Cars></Cars>
-      <Features></Features>
+      <Disclaimer></Disclaimer>
     </div>
   );
 };
