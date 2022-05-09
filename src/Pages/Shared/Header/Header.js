@@ -70,7 +70,7 @@ const Header = () => {
             </Nav>
             <Nav>
               {user ? (
-                <Nav.Link as={Link} to="/manageInventories" className="fs-6 bg-dark text-light">My Items</Nav.Link>
+                <Nav.Link as={Link} to="/myItems" className="fs-6 bg-dark text-light">My Items</Nav.Link>
               ):<></>}
               
             </Nav>

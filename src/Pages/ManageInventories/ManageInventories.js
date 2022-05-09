@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashArrowUp } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { Table } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useCars from "../../Hooks/useCars";
 import "./ManageInventories.css";
 const ManageInventories = () => {
@@ -19,10 +19,6 @@ const ManageInventories = () => {
       });
   };
 
-  const navigate = useNavigate();
-  const addNewItem = () => {
-    navigate("/addInventoryItem");
-  };
 
   return (
     <div className="manage-inventories">
