@@ -9,14 +9,19 @@ const MyItems = () => {
     const [userCars, setUserCars] = useUserCars();
   
     const removeItem = (id) => {
-      fetch(`https://mercedez-warehouse.herokuapp.com/car/${id}`, {
+      const text='Are you sure?'
+      if (window.confirm(text)===true){
+        fetch(`https://mercedez-warehouse.herokuapp.com/car/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
           const remaining = userCars.filter((car) => car._id !== id);
           setUserCars(remaining);
+          alert('deleted!')
         });
+      }
+      
     };
   
   

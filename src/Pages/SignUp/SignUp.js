@@ -39,11 +39,14 @@ const SignUp = () => {
       setError("PassWord should be 6 characters or longer");
       return;
     }
-    createUserWithEmailAndPassword(email, password).then((result) => {
-      const user = result.user;
-      if (user) {
-        navigate("/");
-      }
+    createUserWithEmailAndPassword(email, password)
+    .then((result) => {
+      alert('Account created!')
+      navigate("/");
+      // const user = result.user;
+      // if (user) {
+        
+      // }
     });
     e.target.reset();
   };

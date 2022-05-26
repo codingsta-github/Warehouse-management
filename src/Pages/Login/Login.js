@@ -36,9 +36,10 @@ const Login = () => {
       `https://mercedez-warehouse.herokuapp.com/login`,
       { email }
     );
-    localStorage.setItem("token", data.token);
+    localStorage.setItem("accessToken", data.accessToken);
     navigate(from, { replace: true });
     e.target.reset();
+    alert('login successfully')
   };
   const resetPassword = () => {
     if (email) {

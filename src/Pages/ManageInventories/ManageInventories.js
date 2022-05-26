@@ -9,14 +9,19 @@ const ManageInventories = () => {
   const [cars, setCars] = useCars();
 
   const removeItem = (id) => {
-    fetch(`https://mercedez-warehouse.herokuapp.com/car/${id}`, {
+    let text='Are you sure?';
+    if (window.confirm(text)===true) {
+      fetch(`https://mercedez-warehouse.herokuapp.com/car/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((data) => {
         const remaining = cars.filter((car) => car._id !== id);
         setCars(remaining);
+        alert('deleted!')
       });
+    }
+    
   };
 
 
@@ -46,12 +51,12 @@ const ManageInventories = () => {
                 <td>{car.price}</td>
                 <td>{car.quantity}</td>
                 <td>
-                  <button
+                  {/* <button
                     onClick={() => removeItem(car._id)}
                     className="remove"
                   >
                     <FontAwesomeIcon icon={faTrashArrowUp} />
-                  </button>
+                  </button> */}
                 </td>
               </tr>
             ))}

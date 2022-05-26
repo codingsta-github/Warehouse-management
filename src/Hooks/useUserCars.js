@@ -7,9 +7,11 @@ const useUserCars = () => {
   const [userCars, setUserCars] = useState([]);
   useEffect(() => {
     const email = user.email;
-    const url=`https://mercedez-warehouse.herokuapp.com/userCar?email=${email}`
-    console.log(url);
-    fetch(url)
+    fetch(`https://mercedez-warehouse.herokuapp.com/userCar?email=${email}`,{
+      headers:{
+        authorization:`Bearer ${localStorage.getItem('accessToken')}`
+      }
+    })
       .then((res) => res.json())
       .then((data) => setUserCars(data));
   }, [user]);

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import {  Form } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import "./AddInventoryItem.css";
 const AddInventoryItem = () => {
   const [name, setName] = useState([]);
-  // const [email, setEmail] = useState([]);
   const [price, setPrice] = useState([]);
   const [quantity, setQuantity] = useState([]);
   const [images, setImages] = useState([]);
@@ -41,7 +40,7 @@ const AddInventoryItem = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+       alert('Item added!');
       });
     e.target.reset();
   };
